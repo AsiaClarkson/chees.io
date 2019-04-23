@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
+
+Route::get('/cheeses/index', 'CheesesController@index');
+// Route::get('/cheeses/index', 'CheesesController@store');
+Route::get('/cheeses/create', 'CheesesController@create');
