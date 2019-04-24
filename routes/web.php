@@ -16,5 +16,12 @@ Route::get('/', function () {
 });
 
 Route::get('/cheeses/index', 'CheesesController@index');
+Route::get('/cheeses/cheese', 'CheesesController@singleCheese');
+
+
+Route::get('/cheeses/countries', 'CheesesController@byCountries');
+Route::get('/cheeses/colors', 'CheesesController@byColors');
+Route::get('/cheeses/types', 'CheesesController@byTypes');
+Route::get('/cheeses/textures', 'CheesesController@byTextures');
 // Route::get('/cheeses/index', 'CheesesController@store');
 Route::get('/cheeses/create', 'CheesesController@create');

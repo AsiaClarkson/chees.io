@@ -25,13 +25,16 @@
           <a href="/cheeses/index" class="nav-link">All Cheeses</a>
         </li>
         <li class="nav-item">
-          <a href="/" class="nav-link">By Country</a>
+          <a href="/cheeses/countries" class="nav-link">By Country</a>
         </li>
         <li class="nav-item">
-          <a href="/" class="nav-link">By Type</a>
+          <a href="/cheeses/types" class="nav-link">By Type</a>
         </li>
         <li class="nav-item">
-          <a href="/" class="nav-link">By Texture</a>
+          <a href="/cheeses/textures" class="nav-link">By Texture</a>
+        </li>
+        <li class="nav-item">
+          <a href="/cheeses/colors" class="nav-link">By Color</a>
         </li>
         
         <li class="nav-item">
