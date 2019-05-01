@@ -1,21 +1,21 @@
 @extends('layout')
 @section('title', 'Cheeses by Color')
 @section('main')
-<h1>&#x1f9c0; Cheeses by Color &#x1f9c0;</h1>
 
-<table class='table'>
-    <tr>
-        <th>Cheeses by Color</th>
-    </tr>
+
+<h2 class='text-center'>Cheeses by Color</h2>
+<br>
+<div class="card-columns">
     @foreach($colors as $color)
-    <tr>
-        <td>
-            <div style='width:50px;height: 50px; background-color:{{$color->hexcode}};'></div>
-        </td>
-        <td>
-            <a href='color={{urlencode($color->color)}}'>{{$color->color}}</a>
-        </td>
-    </tr>
-    @endforeach
-</table>
+    <div class="card shadow-sm" style="width:400px">
+        <div class="card-img-top" style="width:100%;background-color:{{$color->hexcode}};">
+                <div class="card-body">
+                    <h4 class="card-title">{{$color->color}} Cheeses</h4>
+                    <a href="/cheeses/color?color={{urlencode($color->color)}}" class="btn btn-light mx-auto d-block">View Cheeses</a>
+                </div>
+            
+        </div>
+    </div>
+@endforeach
+
 @endsection

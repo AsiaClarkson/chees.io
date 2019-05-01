@@ -4,13 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CheeseCountry extends Model
+class Dish extends Model
 {
     protected $primaryKey = 'id';
     public $timestamps = false;
-   
+    protected $guarded = ['id'];
+    
     public function cheeses()
-{
-  return $this->hasMany('App\Cheese', 'country_id');
-}
+    {
+        return $this->belongsToMany('App\Cheese');
+    }
 }

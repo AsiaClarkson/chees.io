@@ -15,7 +15,7 @@ class CreateCheesesTable extends Migration
     {
         Schema::create('cheeses', function (Blueprint $table) {
             $table->increments('id');            
-            $table->string('name')->unique()->nullable(false);
+            $table->string('name')->unique()->nullable();
             $table->string('flavor');
             $table->unsignedBigInteger('type_id');
             $table->foreign('type_id')->references('id')->on('cheese_types');
