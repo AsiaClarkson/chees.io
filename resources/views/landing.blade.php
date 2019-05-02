@@ -5,7 +5,7 @@
 <br>
 <div class="jumbotron jumbotron-fluid bg-warning">
   <div class="container text-center">
-<h4>cheese<h4>
+<h2>cheese<h2>
 <h6>\ ˈchēz  \</h6>
 <p >
 noun<br>

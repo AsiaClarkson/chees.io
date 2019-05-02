@@ -8,7 +8,7 @@
     <div class="card shadow-sm bg-light" style="width:400px">
                 <div class="card-body">
                     <h4 class="card-title">{{$type->type}} Cheeses</h4>
-                    <a href="/cheeses/type?type={{urlencode($type->type)}}" class="btn btn-warning mx-auto d-block">View Cheeses</a>
+                    <a href="/cheeses/type/{{$type->id}}" class="btn btn-warning mx-auto d-block">View Cheeses</a>
                 </div>
             
         </div>

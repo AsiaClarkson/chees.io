@@ -25,16 +25,16 @@ Route::post('/cheeses/{id}/edit', 'CheesesController@update');
 
 
 Route::get('/cheeses/countries', 'CountriesController@countryList');
-Route::get('/cheeses/country', 'CountriesController@byCountry');
+Route::get('/cheeses/country/{id}', 'CountriesController@byCountry');
 
 Route::get('/cheeses/colors', 'ColorsController@colorList');
-Route::get('/cheeses/color', 'ColorsController@byColor');
+Route::get('/cheeses/color/{id}', 'ColorsController@byColor');
 
 Route::get('/cheeses/types', 'TypesController@typesList');
-Route::get('/cheeses/type', 'TypesController@byType');
+Route::get('/cheeses/type/{id}', 'TypesController@byType');
 
 Route::get('/cheeses/textures', 'TexturesController@textureList');
-Route::get('/cheeses/texture', 'TexturesController@byTexture');
+Route::get('/cheeses/texture/{id}', 'TexturesController@byTexture');
 
 Route::get('/dishes/index', 'DishesController@index');
 Route::get('/dishes/dish/{id}', 'DishesController@singleDish');
@@ -53,3 +53,4 @@ Route::post('/login', 'LoginController@login');
 Route::get('/logout', 'LoginController@logout');
 
 Route::get('/users', 'UsersController@index');
+// Route::get('/users', 'UsersController@destroy');

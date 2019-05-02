@@ -11,7 +11,7 @@
         <div class="card-img-top" style="width:100%;background-color:{{$color->hexcode}};">
                 <div class="card-body">
                     <h4 class="card-title">{{$color->color}} Cheeses</h4>
-                    <a href="/cheeses/color?color={{urlencode($color->color)}}" class="btn btn-light mx-auto d-block">View Cheeses</a>
+                    <a href="/cheeses/color/{{$color->id}}" class="btn btn-light mx-auto d-block">View Cheeses</a>
                 </div>
             
         </div>

@@ -2,7 +2,7 @@
 @section('title', 'Color')
 @section('main')
 
-            <h2 class='text-center'>{{$color}} Cheeses</h2>
+            <h2 class='text-center'>{{$color->color}} Cheeses</h2>
             <br>
         <div class="card-columns">
     @forelse($cheeses as $cheese)
@@ -11,15 +11,19 @@
     <div class="card-body">
       <h4 class="card-title">{{$cheese->name}}</h4>
       <p class="card-text">{{$cheese->flavor}}</p>
-      <a href="/cheeses/cheese/{{$cheese->id}}" class="btn btn-warning mx-auto d-block" style='background-color:{{$cheese->hexcode}}'>More Info</a>
+      <a href="/cheeses/cheese/{{$cheese->id}}" class="btn btn-warning mx-auto d-block"
+                style='background-color:{{$cheese->hexcode}}'>More Info</a>
     </div>
   </div>
   @empty
-    <h2 class='text-center'>Sorry, no {{$color}} Cheeses yet!</h2>
+  <div class='col-sm-12'>
+    <h2 class='text-center'>Sorry, no {{$color->color}} Cheeses yet!</h2>
+    </div>
+    <div  class='col-sm-12'>
     <form action='/cheeses/create'>
     <input type="submit" class="btn btn-warning" value='Add A New Cheese'>
     </form>
-
+</div>
     @endforelse
     </div>
 @endsection

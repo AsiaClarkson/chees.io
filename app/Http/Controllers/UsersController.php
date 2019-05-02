@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\User;
 
 class UsersController extends Controller
 {
@@ -19,5 +20,9 @@ class UsersController extends Controller
       return view('/users', [
         'users' => $users
              ]);
+    }
+    public function destroy($id=null){
+      User::where('id',$id)->delete();
+      return redirect('/users');
     }
 }

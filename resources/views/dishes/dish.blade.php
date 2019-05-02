@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', '{{$dishName}}')
+@section('title', $dish->dish_name)
 @section('main')
 <div class="page-header">
   <h1>{{$dish->dish_name}}</h1>
@@ -24,6 +24,7 @@
 </div>
 </div>
   <br>
+  @if (Auth::check())
   <div class="btn-group btn-group-lg">
   <form action='/dishes/{{$dish->id}}/edit'>
   <input type="submit" class="btn btn-warning" value='Edit'>
@@ -35,4 +36,6 @@
   <input type="submit" class="btn btn-danger" value='Delete'>
   </form>
   </div><br>
+  @else
+  @endif
 @endsection

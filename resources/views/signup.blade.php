@@ -43,6 +43,6 @@
     </select>
     <small class="text-danger">{{$errors->first('dish')}}</small>
     <br>
-    <input type="submit" value="Sign Up" class="btn btn-primary">
+    <input type="submit" value="Sign Up" class="btn btn-warning">
   </form>
 @endsection

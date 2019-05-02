@@ -17,19 +17,11 @@ class TexturesController extends Controller
                ]);
       }
 
-      public function byTexture(Request $request){
+      public function byTexture($id=null){
 
-        $query = DB::table('cheeses')
-      ->join('cheese_types', 'cheeses.type_id', '=', 'cheese_types.id')
-      ->join('cheese_textures', 'cheeses.texture_id', '=', 'cheese_textures.id')
-      ->join('cheese_colors', 'cheeses.color_id', '=', 'cheese_colors.id')
-      ->join('cheese_countries', 'cheeses.country_id', '=', 'cheese_countries.id')
-      ;
-      IF ($request->query('texture')){
-        $query->where('texture', '=', $request->query('texture'));
-    }
-      $cheeses = $query->get();
-      $texture = $request->query('texture');
+        $query = Cheese::where('texture_id',$id);
+        $cheeses = $query->get();
+        $texture = CheeseTexture::find($id);
 
         return view('cheeses/texture', [
             'cheeses' => $cheeses,

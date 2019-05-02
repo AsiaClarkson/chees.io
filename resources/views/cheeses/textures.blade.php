@@ -8,7 +8,7 @@
     <div class="card shadow-sm bg-light" style="width:400px">
                 <div class="card-body">
                     <h4 class="card-title">{{$texture->texture}} Cheeses</h4>
-                    <a href="/cheeses/texture?texture={{urlencode($texture->texture)}}" class="btn btn-warning mx-auto d-block">View Cheeses</a>
+                    <a href="/cheeses/texture/{{$texture->id}}" class="btn btn-warning mx-auto d-block">View Cheeses</a>
                 </div>
             
         </div>

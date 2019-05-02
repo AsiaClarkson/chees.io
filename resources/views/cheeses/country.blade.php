@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', 'Country')
 @section('main')
-<h2 class='text-center'>Cheeses from {{$country}}</h2>
+<h2 class='text-center'>Cheeses from {{$country->country}}</h2>
 <br>
 <div class="card-columns">
     @forelse($cheeses as $cheese)
@@ -15,7 +15,7 @@
         </div>
     </div>
     @empty
-    <h2 class='text-center'>Sorry, no Cheeses from {{$country}} yet!</h2>
+    <h2 class='text-center'>Sorry, no Cheeses from {{$country->country}} yet!</h2>
     <form action='/cheeses/create'>
     <input type="submit" class="btn btn-warning" value='Add A New Cheese'>
     </form>

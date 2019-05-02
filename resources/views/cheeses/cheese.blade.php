@@ -28,6 +28,7 @@
 </div>
 </div>
   <br>
+  @if (Auth::check())
   <div class="btn-group btn-group-lg">
   <form action='/cheeses/{{$cheese->id}}/edit'>
   <input type="submit" class="btn btn-warning" value='Edit'>
@@ -39,4 +40,6 @@
   <input type="submit" class="btn btn-danger" value='Delete'>
   </form>
   </div><br>
+  @else
+  @endif
 @endsection
