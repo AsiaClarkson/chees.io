@@ -10,7 +10,7 @@
         <div class="card-body">
             <h4 class="card-title">{{$cheese->name}}</h4>
             <p class="card-text">{{$cheese->flavor}}</p>
-            <a href="/cheeses/cheese?name={{urlencode($cheese->name)}}" class="btn btn-warning mx-auto d-block"
+            <a href="/cheeses/cheese/{{$cheese->id}}" class="btn btn-warning mx-auto d-block"
                 style='background-color:{{$cheese->hexcode}}'>More Info</a>
         </div>
     </div>
